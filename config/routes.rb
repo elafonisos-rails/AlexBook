@@ -1,4 +1,6 @@
 AlexBook::Application.routes.draw do
+  get "product/search"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
