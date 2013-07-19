@@ -1,0 +1,8 @@
+<% @products.each do |product| %>
+
+<h1><%= product.title %></h1>  <%= link_to "add" ,
+                                           :action=>"new",
+                                           :pid=>product.id,
+                                           :quantity=>"1" %>
+
+<% end %>

@@ -1,0 +1,38 @@
+<table border="1">
+
+  <thead>
+    <td>Title</td>
+    <td>Publisher</td>
+    <td>Price</td>
+    <td>Quantity</td>
+  </thead>
+
+<% unless @order.items.nil? %>
+    <% @order.items.each do |item| %>
+        <tr>
+        <td><%= item.title %></td>
+        <td><%= item.publisher %></td>
+        <td><%= item.price %></td>
+        <td><%= item.quantity %></td>
+        </tr>
+    <% end %>
+<% end %>
+
+
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><%= link_to "add", order_search_path %></td>
+</tr>
+
+
+</table>
+
+
+<%= params %>
+<br>
+<%= @order.items %>
+
+<br>
+
